@@ -11,7 +11,7 @@ const CONFIG = {
   email: "dorlineokassie237@gmail.com",
   github: "https://github.com/Dorline0121",
   githubUser: "Dorline0121",       // sert à afficher tes derniers dépôts automatiquement
-  linkedin: "",                  // colle ici l'URL de ton profil LinkedIn (ex. https://www.linkedin.com/in/...)
+  linkedin: "https://www.linkedin.com/in/dorline-tiako-okassie-a744462b6",                  // colle ici l'URL de ton profil LinkedIn (ex. https://www.linkedin.com/in/...)
   portfolio: "https://dorline0121.github.io",   // lien du portfolio (GitHub Pages)
   cv: "assets/CV_TIAKO_OKASSIE_Dorline.pdf",   // ton CV (PDF dans assets/)
 };
