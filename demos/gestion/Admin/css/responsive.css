@@ -1,0 +1,25 @@
+/* =========================================================
+   responsive.css : ajustements pour petits et moyens écrans
+   Chargé juste après ruang-admin.min.css, sans rien changer
+   au reste du thème.
+   ========================================================= */
+
+/* Page de connexion : ruang-admin met 25rem de marge de chaque côté
+   dès 768px, ce qui écrase la carte entre 768 et ~1300px. */
+.container-login { width: 100%; }
+@media (min-width: 768px) {
+  .container-login { margin-left: auto; margin-right: auto; max-width: 480px; }
+}
+@media (max-width: 575.98px) {
+  .container-login { padding-left: 1rem; padding-right: 1rem; }
+  .login-form { padding: 2rem 1.25rem !important; }
+}
+
+/* Tableaux : défilement horizontal fluide dans leur cadre */
+.table-responsive { -webkit-overflow-scrolling: touch; }
+
+/* Titres de page et fil d'Ariane sur téléphone */
+@media (max-width: 575.98px) {
+  #container-wrapper h1.h3 { font-size: 1.3rem; }
+  #container-wrapper .breadcrumb { padding-left: 0; }
+}

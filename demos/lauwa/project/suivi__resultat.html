@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<script src="../demo-shim.js"></script><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Suivi de commande - SECEL</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="../vendor/leaflet/leaflet.css" rel="stylesheet"/>
+<link href="../livraison_carte.css" rel="stylesheet"/>
+<style>
+        .suivi { padding: 40px 0 60px; }
+        .suivi h2 { margin-bottom: 6px; }
+        .suivi-form { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0 24px; }
+        .suivi-form input { flex: 1 1 240px; padding: 12px 14px; border-radius: var(--border-radius); border: 1px solid #ddd; font-size: 16px; text-transform: uppercase; }
+        .suivi-grille { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+        .suivi-carte-boite { position: sticky; top: 20px; }
+        .suivi-carte-boite, .suivi-info { background: #fff; border-radius: 14px; box-shadow: var(--box-shadow); padding: 18px; }
+        .suivi-info h3 { margin-bottom: 8px; }
+        .suivi-kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; font-size: 14px; margin: 12px 0 18px; }
+        .suivi-kv dt { color: #6b7280; }
+        .suivi-kv dd { margin: 0; font-weight: 600; }
+        .suivi-statut { display: inline-block; padding: 4px 12px; border-radius: 99px; color: #fff; font-weight: 700; font-size: 14px; }
+        .suivi-alerte { padding: 12px 16px; border-radius: var(--border-radius); margin-bottom: 18px; }
+        .suivi-alerte.ok { background: #e8f5e9; color: #1b5e20; }
+        .suivi-alerte.ko { background: #ffebee; color: #b71c1c; }
+        .suivi-codes { font-size: 14px; color: #6b7280; }
+        .suivi-codes a { color: var(--primary-color); font-weight: 600; margin-right: 8px; }
+        @media (max-width: 860px) { .suivi-grille { grid-template-columns: 1fr; } }
+    </style>
+<link href="../responsive.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<div class="container">
+<div class="logo"><h1>COMMANDE SECEL</h1></div>
+<nav>
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a class="active" href="suivi.html">Suivi de commande</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<section class="suivi">
+<div class="container">
+<h2>Suivre ma livraison</h2>
+<p>Entrez le code de suivi reçu après votre commande (ex. SEC-0002-3C9D). Livraison partout au Cameroun depuis notre entrepôt de Douala.</p>
+<form class="suivi-form" method="get">
+<input name="code" placeholder="Code de suivi" required="" type="text" value="SEC-0002-3C9D"/>
+<button class="btn btn-primary" type="submit">Suivre</button>
+</form>
+<div class="suivi-grille">
+<div class="suivi-carte-boite">
+<div class="suivi-carte" id="carte"></div>
+</div>
+<div class="suivi-info">
+<h3>Colis SEC-0002-3C9D</h3>
+<span class="suivi-statut" id="statut"></span>
+<div id="frise"></div>
+<div class="suivi-barre"><i id="barre"></i></div>
+<dl class="suivi-kv">
+<dt>Trajet</dt><dd>Douala → Yaoundé (≈ 262 km)</dd>
+<dt>Position</dt><dd id="position"></dd>
+<dt>Arrivée prévue</dt><dd>13/03/2025</dd>
+<dt>Livreur</dt><dd>Rodrigue Ekane</dd>
+<dt>Articles</dt><dd>Montre Connectée Pro (x1)</dd>
+</dl>
+<h3>Historique</h3>
+<div id="historique"></div>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class="container"><p>© 2025 LAUWA LESLY . Tous droits réservés.</p></div>
+</footer>
+<script src="../vendor/leaflet/leaflet.js"></script>
+<script src="../vendor/fond-carte.js"></script>
+<script src="../livraison_carte.js"></script>
+<script>
+        const l = window.DEMO_LIVRAISON || {"id":2,"code":"SEC-0002-3C9D","commande":2,"client":"Marie Ngo","produit":"Montre Connectée Pro (x1)","montant":85000,"destination":"Yaoundé","statut":"En transit","etape":1,"livreur":"Rodrigue Ekane","km":262,"prevue":"2025-03-13","maj":"2025-03-11 15:20:00","itineraire":[{"ville":"Douala","lat":4.0511,"lng":9.7679},{"ville":"Edéa","lat":3.8,"lng":10.1333},{"ville":"Yaoundé","lat":3.848,"lng":11.5021}],"historique":[{"statut":"Confirmée","ville":"Douala","commentaire":"Commande enregistrée, prise en charge par l'entrepôt de Douala","date_evenement":"2025-03-10 17:00:00"},{"statut":"En préparation","ville":"Douala","commentaire":"Colis préparé à l'entrepôt","date_evenement":"2025-03-11 08:30:00"},{"statut":"Expédiée","ville":"Douala","commentaire":"Départ du camion de Douala","date_evenement":"2025-03-11 13:00:00"},{"statut":"En transit","ville":"Edéa","commentaire":"Passage à Edéa","date_evenement":"2025-03-11 15:20:00"}]};
+        const S = window.SuiviCarte;
+        const couleur = S.COULEURS[l.statut];
+        document.getElementById('statut').textContent = l.statut;
+        document.getElementById('statut').style.background = couleur;
+        document.getElementById('frise').innerHTML = S.frise(l);
+        document.getElementById('barre').style.width = S.progression(l) + '%';
+        document.getElementById('barre').style.background = couleur;
+        document.getElementById('position').textContent = l.itineraire[Math.min(l.etape, l.itineraire.length - 1)].ville;
+        document.getElementById('historique').innerHTML = S.historique(l);
+        if (window.L) {
+            const carte = S.creerCarte('carte');
+            S.dessiner(carte, l, { villes: true, epais: true });
+            S.cadrer(carte, [l]);
+            S.legende(carte);
+        } else {
+            document.getElementById('carte').innerHTML = '<p style="padding:20px">Carte indisponible : connexion internet nécessaire (Leaflet / OpenStreetMap).</p>';
+        }
+    </script>
+</body>
+</html>

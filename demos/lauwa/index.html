@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<script src="demo-shim.js"></script><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Connexion-inscription</title>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#22b8d1',
+                        secondary: '#ff3b5c',
+                        dark: '#0a1626',
+                        light: '#e6f8fc'
+                    },
+                    boxShadow: {
+                        neon: '0 0 5px theme("colors.primary"), 0 0 20px theme("colors.primary")',
+                        neonRed: '0 0 5px theme("colors.secondary"), 0 0 20px theme("colors.secondary")'
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+<link href="responsive.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center p-4">
+<div class="bg-animation">
+<span style="--x: 300px; --y: -200px; animation-delay: 0s;"></span>
+<span style="--x: -200px; --y: 400px; animation-delay: 2s;"></span>
+<span style="--x: 400px; --y: 300px; animation-delay: 4s;"></span>
+<span style="--x: -300px; --y: -200px; animation-delay: 6s;"></span>
+<span style="--x: 250px; --y: 300px; animation-delay: 8s;"></span>
+<span style="--x: -350px; --y: -300px; animation-delay: 10s;"></span>
+</div>
+<div class="form-container w-full max-w-md rounded-2xl shadow-2xl relative z-10">
+<div class="form-slider flex w-[200%]">
+<!-- Formulaire de Connexion -->
+<div class="login-form w-1/2 p-6">
+<div class="flex flex-col items-center mb-8">
+<img alt="SECEL Logo" class="w-40 mb-4" src="https://pfst.cf2.poecdn.net/base/image/60bd8ebddab8ded6febb6e48e521c923b9f03d585dcad3db0dc381de3d929ce7?w=799&amp;h=308"/>
+<h2 class="text-primary text-3xl font-bold tracking-wider">CONNEXION</h2>
+<div class="h-1 w-20 bg-secondary rounded-full mt-2"></div>
+</div>
+<form action="traitement2.html" method="post">
+<div class="mb-5">
+<label class="block text-light mb-2 text-sm" for="login-email">Email</label>
+<input class="glass-input w-full px-4 py-3 rounded-lg text-base" id="login-email" name="email2" required="" type="email"/>
+</div>
+<div class="mb-5">
+<label class="block text-light mb-2 text-sm" for="login-password">Mot de passe</label>
+<input class="glass-input w-full px-4 py-3 rounded-lg text-base" id="login-password" name="mot_de_passe2" required="" type="password"/>
+</div>
+<div class="flex justify-between items-center mb-5">
+<div class="flex items-center">
+<input class="mr-2 accent-primary" id="remember" type="checkbox"/>
+<label class="text-light text-sm" for="remember">Se souvenir de moi</label>
+</div>
+<a class="text-primary text-sm hover:underline" href="#">Mot de passe oublié?</a>
+</div>
+<button class="glass-button w-full py-3 bg-primary text-white font-bold rounded-lg shadow-neon hover:bg-opacity-90" type="submit">
+                        CONNEXION
+                    </button>
+</form>
+<div class="mt-8 text-center">
+<p class="text-light">Pas encore de compte?</p>
+<button class="mt-2 text-secondary font-bold hover:underline tracking-wide" id="show-signup">
+                        CRÉER UN COMPTE
+                    </button>
+</div>
+</div>
+<!-- Formulaire d'Inscription -->
+<div class="signup-form w-1/2 p-6">
+<div class="flex flex-col items-center mb-8">
+<img alt="SECEL Logo" class="w-40 mb-4" src="https://pfst.cf2.poecdn.net/base/image/60bd8ebddab8ded6febb6e48e521c923b9f03d585dcad3db0dc381de3d929ce7?w=799&amp;h=308"/>
+<h2 class="text-primary text-3xl font-bold tracking-wider">INSCRIPTION</h2>
+<div class="h-1 w-20 bg-secondary rounded-full mt-2"></div>
+</div>
+<form action="traitement.html" method="post">
+<div class="mb-5">
+<label class="block text-light mb-2 text-sm" for="signup-name">Nom</label>
+<input class="glass-input w-full px-4 py-3 rounded-lg text-base" id="signup-name" name="nom" required="" type="text"/>
+</div>
+<div class="mb-5">
+<label class="block text-light mb-2 text-sm" for="signup-firstname">Prénom</label>
+<input class="glass-input w-full px-4 py-3 rounded-lg text-base" id="signup-firstname" name="prenom" required="" type="text"/>
+</div>
+<div class="mb-5">
+<label class="block text-light mb-2 text-sm" for="signup-address">Adresse</label>
+<input class="glass-input w-full px-4 py-3 rounded-lg text-base" id="signup-address" name="adresse" required="" type="text"/>
+</div>
+<div class="mb-5">
+<label class="block text-light mb-2 text-sm" for="signup-email">Email</label>
+<input class="glass-input w-full px-4 py-3 rounded-lg text-base" id="signup-email" name="email" required="" type="email"/>
+</div>
+<div class="mb-5">
+<label class="block text-light mb-2 text-sm" for="signup-password">Mot de passe</label>
+<input class="glass-input w-full px-4 py-3 rounded-lg text-base" id="signup-password" name="mot_de_passe" required="" type="password"/>
+</div>
+<div class="mb-5">
+<label class="block text-light mb-2 text-sm" for="signup-role">Rôle</label>
+<select class="glass-input w-full px-4 py-3 rounded-lg text-base" id="signup-role" name="role" required="">
+<option value="user">Utilisateur</option>
+<option value="admin">Administrateur</option>
+</select>
+</div>
+<div class="flex items-center mb-5">
+<input class="mr-2 accent-primary" id="terms" required="" type="checkbox"/>
+<label class="text-light text-sm" for="terms">J'accepte les <a class="text-primary hover:underline" href="#">conditions d'utilisation</a></label>
+</div>
+<button class="glass-button w-full py-3 bg-secondary text-white font-bold rounded-lg shadow-neonRed hover:bg-opacity-90" type="submit">
+                        S'INSCRIRE
+                    </button>
+</form>
+<div class="mt-8 text-center">
+<p class="text-light">Déjà un compte?</p>
+<button class="mt-2 text-primary font-bold hover:underline tracking-wide" id="show-login">
+                        SE CONNECTER
+                    </button>
+</div>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

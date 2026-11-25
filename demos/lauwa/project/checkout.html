@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<script src="../demo-shim.js"></script><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>COMMANDE - Finaliser votre commande</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="../responsive.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<div class="container">
+<div class="logo">
+<h1>COMMANDE SECEL</h1>
+</div>
+<nav>
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="suivi.html">Suivi de commande</a></li>
+<li><a href="#" id="cart-icon">Panier <span id="cart-count">0</span></a></li>
+</ul>
+</nav>
+</div>
+</header>
+<section class="checkout">
+<div class="container">
+<h2>Finaliser votre commande</h2>
+<div class="checkout-container">
+<div class="order-summary">
+<h3>Résumé de la commande</h3>
+<div id="checkout-items">
+<!-- tes articles seront inserer ici -->
+</div>
+<div class="checkout-total">
+<p>Total: <span id="checkout-total">0</span> FCFA</p>
+</div>
+</div>
+<div class="order-form">
+<h3>Détails de la commande</h3>
+<form action="order.html" id="" method="post">
+<div class="form-group">
+<label for="name">Nom complet</label>
+<input id="name" name="name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="email">Email</label>
+<input id="email" name="email" required="" type="email"/>
+</div>
+<div class="form-group">
+<label for="phone">Téléphone</label>
+<input id="phone" name="phone" required="" type="tel"/>
+</div>
+<div class="form-group">
+<label for="ville">Ville de livraison (Cameroun)</label>
+<select id="ville" name="ville" required="">
+<option value="Douala">Douala</option>
+<option value="Yaoundé">Yaoundé</option>
+<option value="Bafoussam">Bafoussam</option>
+<option value="Bamenda">Bamenda</option>
+<option value="Garoua">Garoua</option>
+<option value="Maroua">Maroua</option>
+<option value="Ngaoundéré">Ngaoundéré</option>
+<option value="Bertoua">Bertoua</option>
+<option value="Ebolowa">Ebolowa</option>
+<option value="Kribi">Kribi</option>
+<option value="Limbé">Limbé</option>
+<option value="Buea">Buea</option>
+<option value="Kumba">Kumba</option>
+<option value="Nkongsamba">Nkongsamba</option>
+<option value="Edéa">Edéa</option>
+<option value="Dschang">Dschang</option>
+<option value="Bafang">Bafang</option>
+<option value="Foumban">Foumban</option>
+<option value="Mbalmayo">Mbalmayo</option>
+<option value="Sangmélima">Sangmélima</option>
+<option value="Bafia">Bafia</option>
+<option value="Kousseri">Kousseri</option>
+</select>
+</div>
+<div class="form-group">
+<label for="address">Adresse de livraison</label>
+<textarea id="address" name="address" required=""></textarea>
+</div>
+<div class="form-group">
+<label for="product-notes">Notes supplémentaires</label>
+<textarea id="product-notes" name="product-notes"></textarea>
+</div>
+<div class="form-group">
+<label>Mode de paiement</label>
+<div class="payment-methods">
+<div class="payment-method">
+<input id="orange-money" name="payment_method" required="" type="radio" value="orange"/>
+<label for="orange-money">
+<span class="payment-logo orange">Orange Money</span>
+</label>
+</div>
+<div class="payment-method">
+<input id="mtn-money" name="payment_method" required="" type="radio" value="mtn"/>
+<label for="mtn-money">
+<span class="payment-logo mtn">MTN Mobile Money</span>
+</label>
+</div>
+</div>
+</div>
+<input id="order-data" name="order_data" type="hidden"/>
+<button class="btn btn-primary" type="submit">Valider la commande</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class="container">
+<p>© 2025 LAUWA LESLY . Tous droits réservés.</p>
+</div>
+</footer>
+<script src="products.js"></script>
+<script src="checkout.js"></script>
+</body>
+</html>

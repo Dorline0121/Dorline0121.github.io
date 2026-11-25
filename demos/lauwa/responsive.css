@@ -1,0 +1,26 @@
+/* =========================================================
+   responsive.css : ajustements pour petits écrans
+   (boutique, suivi de commande, tableau de bord admin)
+   ========================================================= */
+
+/* Image de logo sans source : on la masque plutôt que d'afficher le texte alternatif */
+img[src=""] { display: none; }
+
+/* En-tête de la boutique : le menu passe sous le titre au lieu de déborder */
+@media (max-width: 768px) {
+  header .container { flex-wrap: wrap; justify-content: center; gap: .5rem 1rem; }
+  header .container nav ul { flex-wrap: wrap; justify-content: center; gap: .25rem .5rem; }
+  header .container nav ul li { margin-left: 0; }
+  .logo h1 { font-size: 1.4rem; text-align: center; }
+}
+@media (max-width: 400px) {
+  header .container nav ul li a { padding: .4rem .5rem; font-size: .95rem; }
+}
+
+/* Tableau de bord admin : la recherche se réduit au lieu de pousser l'en-tête hors de l'écran */
+@media (max-width: 640px) {
+  #global-search { width: 8.5rem; }
+}
+@media (max-width: 380px) {
+  #global-search { width: 6.5rem; padding-right: .5rem; }
+}

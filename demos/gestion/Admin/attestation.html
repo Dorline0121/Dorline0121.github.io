@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<script src="../demo-shim.js"></script><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Attestation de Formation</title>
+<link href="styles.css" rel="stylesheet"/>
+<script src="script.js"></script>
+</head>
+<body>
+<div class="attestation-form">
+<header>
+<img alt="logo de l'entreprise" class="logo" src="images1.png"/>
+<h2 class="title">Attestation de Formation</h2>
+</header>
+<form action="attestation.html" method="POST">
+<div class="form-group">
+<label for="student">Étudiant:</label>
+<select id="student" name="studentId">
+<option value="1">Brice</option>
+<option value="2">Sandrine</option>
+<option value="3">Yannick</option>
+<option value="4">Laure</option>
+<option value="5">Franck</option>
+<option value="6">Estelle</option>
+<option value="7">Arnaud</option>
+<option value="8">Grâce</option>
+<option value="9">Kevin</option>
+<option value="10">Mireille</option>
+<option value="11">Junior</option>
+<option value="12">Prisca</option>
+</select>
+</div>
+<div class="form-group">
+<label for="formation">Formation:</label>
+<select id="formation" name="formationId">
+<option value="1">Word et Excel avancés</option>
+<option value="2">Initiation à la bureautique</option>
+<option value="3">Création de sites web</option>
+<option value="4">Réseaux informatiques</option>
+</select>
+</div>
+<div class="form-group">
+<label for="class">Classe:</label>
+<select id="class" name="classId">
+<option value="1">Bureautique</option>
+<option value="2">Développement Web</option>
+<option value="3">Réseaux et maintenance</option>
+</select>
+</div>
+<div class="form-group">
+<label for="classArm">Lieu:</label>
+<select id="classArm" name="classArmId">
+<option value="1">Douala - Akwa</option>
+<option value="2">Douala - Bonamoussadi</option>
+<option value="3">Douala - Akwa</option>
+<option value="4">Yaoundé - Bastos</option>
+</select>
+</div>
+<div class="form-group">
+<label for="teacher">Enseignant:</label>
+<select id="teacher" name="teacherId">
+<option value="1">Paul</option>
+<option value="2">Aline</option>
+<option value="3">Hervé</option>
+<option value="4">Clarisse</option>
+</select>
+</div>
+<div class="form-group">
+<label for="session">Session:</label>
+<select id="session" name="sessionId">
+<option value="1">2024/2025</option>
+<option value="2">2024/2025</option>
+</select>
+</div>
+<div class="form-group">
+<label for="mention">Mention obtenue:</label>
+<select id="mention" name="mention">
+<option value="Très Bien">Très Bien</option>
+<option value="Bien">Bien</option>
+<option value="Assez Bien">Assez Bien</option>
+<option value="Passable">Passable</option>
+</select>
+</div>
+<button name="generate" type="submit">Générer l'attestation</button>
+</form>
+</div>
+</body>
+</html>

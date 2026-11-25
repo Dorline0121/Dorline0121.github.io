@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dorline Tiako Okassie</title>
+<meta name="description" content="Portfolio de Dorline TIAKO OKASSIE, étudiante ingénieure Data & IA à l'ECE Paris.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Young+Serif&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#projets" data-i18n="skip">Aller aux projets</a>
+
+<!-- ========== EN-TÊTE ========== -->
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#top" aria-label="Accueil">
+      <span class="brand-mark">DT</span>
+      <span class="brand-name">Dorline Tiako Okassie</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#projets" data-i18n="nav.projects">Projets</a>
+      <a href="#parcours" data-i18n="nav.path">Parcours</a>
+      <a href="#competences" data-i18n="nav.skills">Compétences</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="controls">
+      <button class="ctrl" id="lang-toggle" type="button" aria-label="Switch to English">EN</button>
+      <button class="ctrl" id="theme-toggle" type="button" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ========== HERO ========== -->
+  <section class="hero wrap">
+    <div class="hero-text">
+      <img class="hero-photo" src="assets/dorline.jpg" alt="Dorline Tiako Okassie" width="140" height="140">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Étudiante ingénieure · Data &amp; IA · ECE Paris</p>
+      <h1>Dorline <span class="h1-last">Tiako Okassie</span></h1>
+      <p class="lead" data-i18n="hero.lead">Je transforme des données brutes en décisions : nettoyage et analyse avec Python et SQL, modèles de Machine Learning, et tableaux de bord que les équipes métier lisent vraiment.</p>
+      <p class="status-pill"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.status">Recherche un stage de 4 mois en Data &amp; IA</span></p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#projets" data-i18n="hero.cta1">Voir mes projets</a>
+        <a class="btn" href="#contact" data-i18n="hero.cta2">Me contacter</a>
+        <a class="btn btn-ghost" id="cv-link" href="#" target="_blank" rel="noopener" hidden data-i18n="hero.cv">Télécharger mon CV</a>
+      </div>
+    </div>
+
+    <figure class="fig">
+      <div class="fig-head">
+        <span data-i18n="fig.title">Régression linéaire · descente de gradient</span>
+        <span class="fig-live"><span class="dot" aria-hidden="true"></span>live</span>
+      </div>
+      <canvas id="gd-canvas" width="560" height="380" role="img" aria-label="Animation : une droite de régression s'ajuste à un nuage de points par descente de gradient"></canvas>
+      <figcaption class="fig-readout">
+        <span><span data-i18n="fig.epoch">époque</span> <b id="gd-epoch">000</b></span>
+        <span>MSE <b id="gd-mse">—</b></span>
+        <span>ŷ = <b id="gd-eq">0.00x + 0.00</b></span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- ========== À PROPOS ========== -->
+  <section class="section wrap about" id="apropos">
+    <div class="about-text">
+      <p class="eyebrow" data-i18n="about.eyebrow">À propos</p>
+      <h2 data-i18n="about.title">Rigoureuse, curieuse, et du côté des données.</h2>
+      <p data-i18n="about.p1">Je suis en quatrième année du cycle ingénieur à l'ECE Paris, majeure Data &amp; Intelligence Artificielle. Avant Paris, j'ai suivi une double formation à l'IME de Douala : classes préparatoires et BTS Génie Logiciel. Cette base en développement me sert tous les jours quand je construis un pipeline de données ou que je déploie un modèle.</p>
+      <p data-i18n="about.p2">Mes stages chez CAMTEL et dans un centre de santé m'ont appris qu'une analyse ne vaut que si quelqu'un peut s'en servir. Je construis mon GitHub projet après projet, et ce portfolio grandit avec lui.</p>
+    </div>
+    <dl class="facts">
+      <div><dt data-i18n="facts.school">Formation</dt><dd data-i18n="facts.school.v">ING4 · ECE Paris<br>Majeure Data &amp; IA</dd></div>
+      <div><dt data-i18n="facts.lang">Langues</dt><dd data-i18n="facts.lang.v">Français<br>Anglais C1 · TOEIC 850</dd></div>
+      <div><dt data-i18n="facts.where">Basée à</dt><dd>Île-de-France</dd></div>
+      <div><dt data-i18n="facts.certs">Certifications</dt><dd>MEP · GPAS</dd></div>
+      <div><dt data-i18n="facts.club">Engagement</dt><dd data-i18n="facts.club.v">Présidente du Health Club, IME</dd></div>
+      <div><dt data-i18n="facts.hobbies">Centres d'intérêt</dt><dd data-i18n="facts.hobbies.v">Musique · Cinéma · Sport · Voyage</dd></div>
+    </dl>
+  </section>
+
+  <!-- ========== PROJETS ========== -->
+  <section class="section wrap" id="projets">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow" data-i18n="projects.eyebrow">Projets</p>
+        <h2 data-i18n="projects.title">Ce que j'ai construit</h2>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrer les projets" id="filters"></div>
+    </div>
+    <div class="grid" id="project-grid" aria-live="polite"></div>
+
+    <div class="next-strip">
+      <div>
+        <p class="next-title" data-i18n="next.title">Prochain projet en préparation</p>
+        <p class="next-text" data-i18n="next.text">J'ajoute régulièrement de nouveaux projets. Pour suivre ce sur quoi je travaille en ce moment, le plus simple est de regarder mon GitHub.</p>
+      </div>
+      <a class="btn" id="gh-follow" href="https://github.com/Dorline0121" target="_blank" rel="noopener" data-i18n="next.cta">Suivre sur GitHub</a>
+    </div>
+
+    <!-- Dépôts GitHub chargés automatiquement (visible si l'API répond) -->
+    <div class="repos" id="repos" hidden>
+      <p class="eyebrow" data-i18n="repos.eyebrow">Derniers dépôts GitHub</p>
+      <ul class="repo-list" id="repo-list"></ul>
+    </div>
+  </section>
+
+  <!-- ========== PARCOURS ========== -->
+  <section class="section wrap" id="parcours">
+    <p class="eyebrow" data-i18n="path.eyebrow">Parcours</p>
+    <h2 data-i18n="path.title">Expériences et formation</h2>
+
+    <div class="path-cols">
+      <div>
+        <h3 class="col-title" data-i18n="path.exp">Expériences</h3>
+        <ol class="timeline">
+          <li>
+            <p class="t-date" data-i18n="exp1.date">Juin – août 2024</p>
+            <h4 data-i18n="exp1.role">Stagiaire Data Analyst / Data Scientist</h4>
+            <p class="t-org">CAMTEL · Douala, Cameroun</p>
+            <ul data-i18n="exp1.list">
+              <li>Collecte, nettoyage et analyse de données clients avec Excel et SQL</li>
+              <li>Analyses statistiques pour repérer tendances et valeurs aberrantes</li>
+              <li>Modèles de régression et de prévision des ventes en Python et TensorFlow</li>
+              <li>Rapports Power BI pour les parties prenantes</li>
+              <li>Pilotage d'un projet data marketing : <strong>+15 % de taux de conversion client</strong></li>
+            </ul>
+          </li>
+          <li>
+            <p class="t-date" data-i18n="exp2.date">Août – septembre 2024</p>
+            <h4 data-i18n="exp2.role">Stagiaire, département informatique</h4>
+            <p class="t-org">SECEL Sarl · Douala, Cameroun</p>
+            <ul data-i18n="exp2.list">
+              <li>Maintenance informatique et configuration de routeurs</li>
+              <li>Conception de formulaires et de sites web (HTML5/CSS, PHP, JavaScript)</li>
+            </ul>
+          </li>
+          <li>
+            <p class="t-date" data-i18n="exp3.date">Juin – juillet 2022</p>
+            <h4 data-i18n="exp3.role">Stagiaire Data</h4>
+            <p class="t-org">Centre de Santé Intégré Ndokovi · Bafang, Cameroun</p>
+            <ul data-i18n="exp3.list">
+              <li>Collecte et structuration de données médicales et administratives</li>
+              <li>Mise en place d'une base MySQL pour améliorer la traçabilité des dossiers</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <div>
+        <h3 class="col-title" data-i18n="path.edu">Formation</h3>
+        <ol class="timeline">
+          <li>
+            <p class="t-date">2025 – 2028</p>
+            <h4 data-i18n="edu1.title">Cycle ingénieur, majeure Data &amp; IA</h4>
+            <p class="t-org">ECE Paris · OMNES Education</p>
+            <p class="t-note" data-i18n="edu1.note">Actuellement en ING4. Machine Learning, Deep Learning, traitement d'image, calcul embarqué.</p>
+          </li>
+          <li>
+            <p class="t-date">2024 – 2025</p>
+            <h4>BTS Génie Logiciel</h4>
+            <p class="t-org">IME Campus Leader · Douala, Cameroun</p>
+          </li>
+          <li>
+            <p class="t-date">2023 – 2025</p>
+            <h4 data-i18n="edu3.title">Cycle préparatoire ING1 &amp; ING2</h4>
+            <p class="t-org">IME Campus Leader · Douala, Cameroun</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COMPÉTENCES ========== -->
+  <section class="section wrap" id="competences">
+    <p class="eyebrow" data-i18n="skills.eyebrow">Compétences</p>
+    <h2 data-i18n="skills.title">Ma boîte à outils</h2>
+    <div class="skills">
+      <div class="skill-group">
+        <h3 data-i18n="skills.g1">Langages</h3>
+        <ul class="chips"><li>Python</li><li>SQL</li><li>R</li><li>Java (POO)</li><li>C</li><li>C++</li><li>HTML/CSS</li><li>JavaScript</li><li>PHP</li></ul>
+      </div>
+      <div class="skill-group">
+        <h3 data-i18n="skills.g2">Data &amp; Machine Learning</h3>
+        <ul class="chips"><li>pandas</li><li>scikit-learn</li><li>XGBoost</li><li>TensorFlow</li><li>Optuna</li><li>matplotlib</li><li>seaborn</li><li>TinyML</li></ul>
+      </div>
+      <div class="skill-group">
+        <h3 data-i18n="skills.g3">BI &amp; visualisation</h3>
+        <ul class="chips"><li>Power BI</li><li>DAX</li><li>Tableau</li><li>Excel</li><li>VBA</li></ul>
+      </div>
+      <div class="skill-group">
+        <h3 data-i18n="skills.g4">Outils &amp; déploiement</h3>
+        <ul class="chips"><li>Git / GitHub</li><li>Jupyter</li><li>Google Colab</li><li>Kaggle</li><li>Flask</li><li>Docker</li><li>MySQL</li><li>Matlab</li><li>Arduino IDE</li></ul>
+      </div>
+      <div class="skill-group">
+        <h3 data-i18n="skills.g5">Méthodes</h3>
+        <ul class="chips"><li>Agile Scrum</li><li>UML</li><li>MVC</li></ul>
+      </div>
+      <div class="skill-group">
+        <h3 data-i18n="skills.g6">Savoir-être</h3>
+        <ul class="chips" data-i18n="skills.soft"><li>Travail en équipe</li><li>Adaptabilité culturelle</li><li>Rigueur</li><li>Esprit d'analyse</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section wrap contact" id="contact">
+    <div>
+      <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+      <h2 data-i18n="contact.title">Travaillons ensemble.</h2>
+      <p class="contact-text" data-i18n="contact.text">Je cherche un stage de 4 mois en Data &amp; IA. Si vous avez un projet ou une question sur mon parcours, écrivez-moi : je réponds rapidement.</p>
+    </div>
+    <div class="contact-card">
+      <p class="c-label">E-mail</p>
+      <div class="email-row">
+        <a class="email" id="email-link" href="mailto:dorlineokassie237@gmail.com">dorlineokassie237@gmail.com</a>
+        <button class="btn btn-small" id="copy-email" type="button" data-i18n="contact.copy">Copier</button>
+      </div>
+      <p class="copy-status" id="copy-status" role="status"></p>
+      <div class="social">
+        <a id="gh-link" href="https://github.com/Dorline0121" target="_blank" rel="noopener">GitHub ↗</a>
+        <a id="li-link" href="#" target="_blank" rel="noopener" hidden>LinkedIn ↗</a>
+        <a id="pf-link" href="#" target="_blank" rel="noopener" hidden>Portfolio ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer wrap">
+  <p>© <span id="year">2026</span> Dorline TIAKO OKASSIE</p>
+  <p data-i18n="footer.made">Conçu et codé en HTML, CSS et JavaScript.</p>
+</footer>
+
+<!-- ========== FENÊTRE DE DÉTAIL D'UN PROJET ========== -->
+<dialog class="modal" id="project-modal" aria-labelledby="modal-title">
+  <div class="modal-inner">
+    <button class="modal-close" id="modal-close" type="button" aria-label="Fermer">×</button>
+    <div id="modal-body"></div>
+  </div>
+</dialog>
+
+<script src="dashboard.js"></script>
+<script src="plantamitz.js"></script>
+<script src="javazic.js"></script>
+<script src="aero.js"></script>
+<script src="superstore.js"></script>
+<script src="labs-ds.js"></script>
+<script src="intro-ml.js"></script>
+<script src="neural-speech.js"></script>
+<script src="secel-demos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
