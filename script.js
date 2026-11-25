@@ -13,7 +13,7 @@ const CONFIG = {
   githubUser: "Dorline0121",       // sert à afficher tes derniers dépôts automatiquement
   linkedin: "",                  // colle ici l'URL de ton profil LinkedIn (ex. https://www.linkedin.com/in/...)
   portfolio: "https://dorline0121.github.io",   // lien du portfolio (GitHub Pages)
-  cv: "",                        // chemin vers ton CV, ex. "assets/CV_Dorline_TIAKO_OKASSIE.pdf"
+  cv: "assets/CV_TIAKO_OKASSIE_Dorline.pdf",   // ton CV (PDF dans assets/)
 };
 
 /* ---------- 2. Catégories (filtres) ---------- */
@@ -878,7 +878,7 @@ const EN = {
   "nav.projects": "Projects", "nav.path": "Background", "nav.skills": "Skills", "nav.contact": "Contact",
   "hero.eyebrow": "Engineering student · Data &amp; AI · ECE Paris",
   "hero.lead": "I turn raw data into decisions: cleaning and analysis with Python and SQL, Machine Learning models, and dashboards that business teams actually read.",
-  "hero.status": "Looking for a 4-month Data &amp; AI internship",
+  "hero.status": "4-month Data &amp; AI internship · from 19 April 2027",
   "hero.cta1": "See my projects", "hero.cta2": "Get in touch", "hero.cv": "Download my CV",
   "fig.title": "Linear regression · gradient descent", "fig.epoch": "epoch",
   "about.eyebrow": "About",
@@ -911,7 +911,7 @@ const EN = {
   "skills.g4": "Tools &amp; deployment", "skills.g5": "Methods", "skills.g6": "Soft skills",
   "skills.soft": "<li>Teamwork</li><li>Cross-cultural adaptability</li><li>Rigour</li><li>Analytical mindset</li>",
   "contact.eyebrow": "Contact", "contact.title": "Let's work together.",
-  "contact.text": "I'm looking for a 4-month Data &amp; AI internship. If you have a project or a question about my background, write to me: I reply quickly.",
+  "contact.text": "I'm looking for a 4-month (16-week) Data &amp; AI internship starting 19 April 2027. If you have a project or a question about my background, write to me: I reply quickly.",
   "contact.copy": "Copy",
   "footer.made": "Designed and coded in HTML, CSS and JavaScript.",
 };
